@@ -1819,3 +1819,60 @@ div.cs-select{
 }
 
 
+
+h2.about-heading-section, h4.small-heading {
+    color: #44C662;
+    font-weight: 500;
+}
+.realestate-feature-box {
+	background: #f8f8f8;
+	padding: 30px;
+	text-align: center;
+	border-bottom: 10px solid transparent;
+	transition: all 0.3s ease;
+	height: 100%;
+  }
+  .realestate-feature-box:hover {
+	border-bottom: 10px solid #9acd32;
+  }
+  .realestate-feature-icon {
+	font-size: 40px;
+	color: #9acd32;
+	margin-bottom: 15px;
+  }
+  .realestate-feature-box h5 {
+	margin-bottom: 15px;
+	font-weight: bold;
+  }
+
+  .realestate-item h4 {
+	background: #ccc;
+	padding: 50px 0;
+	text-align: center;
+	margin: 10px 0;
+  }
+
+  .welcome-section {
+	padding: 40px 15px;
+  }
+  .welcome-image {
+	width: 100%;
+    height: 400px;
+    object-fit: cover;
+    padding: 10px 25px 15px 25px;
+    border: 8px solid #9acd32;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .about-card-bg {
+    background-color: #44C662;
+}
+
+.about-card-bg .breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+span.custom-bullet {
+    color: #44C662;
+}
+  

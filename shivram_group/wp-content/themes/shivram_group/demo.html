@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    ul.timeline {
+      list-style: none;
+      padding-left: 50px;
+      position: relative;
+      margin-top: 30px;
+    }
+
+    ul.timeline:before {
+      content: '';
+      background: #bebebf;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 1;
+    }
+
+    ul.timeline > li {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 20px;
+    }
+
+    ul.timeline > li:before {
+      content: '';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #ff7e3e;
+      left: 20px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      z-index: 2;
+    }
+
+    ul.timeline h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ff7e3e;
+      margin-bottom: 0.2rem;
+    }
+
+    ul.timeline p {
+      margin-bottom: 0;
+      color: #212529;
+    }
+
+    @media (max-width: 767px) {
+      ul.timeline {
+        padding-left: 40px;
+      }
+
+      ul.timeline:before {
+        left: 24px;
+      }
+
+      ul.timeline > li:before {
+        left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="row" style="margin: 0px;">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <ul class="timeline">
+        <li>
+          <h2>2005</h2>
+          <p>North Court Commercial Offices</p>
+        </li>
+        <li>
+          <h2>2006</h2>
+          <p>Nanospace Information Technology Park</p>
+        </li>
+        <li>
+          <h2>2008</h2>
+          <p>Green Olive Phase 1 Residential Homes</p>
+        </li>
+        <li>
+          <h2>2009</h2>
+          <p>City Centre Commercial Offices</p>
+        </li>
+        <li>
+          <h2>2011</h2>
+          <p>Luxor Residential Luxury Homes</p>
+        </li>
+        <li>
+          <h2>2014</h2>
+          <p>Platinum Square Commercial Offices</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <ul class="timeline">
+        <li>
+          <h2>2017</h2>
+          <p>Platinum Square Commercial Offices Phase 2</p>
+        </li>
+        <li>
+          <h2>2019</h2>
+          <p>The Platinum Towers in IT Hub of Kharadi ,Pune</p>
+        </li>
+        <li>
+          <h2>2022</h2>
+          <p>Platinum Capital in Koregaon Park</p>
+        </li>
+        <li>
+          <h2>2023</h2>
+          <p>The Platinum Towers Phase-I Completed.</p>
+        </li>
+        <li>
+          <h2>2023</h2>
+          <p>Ovella Launched</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

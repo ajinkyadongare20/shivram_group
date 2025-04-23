@@ -60,6 +60,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	
+	<!-- Owl Carousel JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -80,6 +85,11 @@
 	
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/sass/style.scss">
+
+
+
+	<!-- <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/ex_css/owl.carousel.css"> -->
+
 
 
 	<!-- Modernizr JS -->
@@ -109,7 +119,7 @@
 							<li class="active"><a href="index.html">Home</a></li>
 							<li><a href="About.html">About</a></li>
 							<li>
-								<a href="properties.html" class="fh5co-sub-ddown">Project</a>
+								<a href="properties.html" class="fh5co-sub-ddown">Properties</a>
 								<ul class="fh5co-sub-menu">
 									<li><a href="#">1 BHK</a></li>
 									<li><a href="#">2 BHK</a></li>
@@ -117,8 +127,8 @@
 									<li><a href="#">4 BHK</a></li>
 								</ul>
 							</li>
-							<li>
-								<a href="properties.html" class="fh5co-sub-ddown">Properties</a>
+							<!-- <li>
+								<a href="project.html" class="fh5co-sub-ddown">Project</a>
 								<ul class="fh5co-sub-menu">
 									<li><a href="#">Family</a></li>
 									<li><a href="#">CSS3 &amp; HTML5</a></li>
@@ -126,7 +136,7 @@
 									<li><a href="#">Node JS</a></li>
 									<li><a href="#">Django &amp; Python</a></li>
 								</ul>
-							</li>
+							</li> -->
 							<li><a href="agent.html">Agent</a></li>
 							<li><a href="blog.html">Blog</a></li>
 							<li><a href="faqs.html">FAQs</a></li>
