@@ -243,7 +243,7 @@ figure {
 	}
 }
 #fh5co-hero {
-	min-height: 700px;
+	min-height: 800px;
 	background: $brand-white url(../images/loader.gif) no-repeat center center;
 	position: relative;
 	.overlay{
@@ -381,7 +381,6 @@ figure {
 					width: 100%;
 					padding: 2.5em;
 					background: rgba($brand-black,.7);
-					margin-left: 1em;
 					@media screen and (max-width: $screen-sm){
 						margin-left: 0;
 					}
@@ -1174,7 +1173,7 @@ div.cs-select{
 
 
 #fh5co-features {
-	padding: 7em 0;
+	padding: 0em 0;
 
 
 	.feature-left {
@@ -1704,10 +1703,10 @@ div.cs-select{
 }
 
 .fh5co-nav-toggle i::before {
-  top: -7px;
+  top: 30px;
 }
 .fh5co-nav-toggle i::after {
-  bottom: -7px;
+  bottom: -20px;
 }
 .fh5co-nav-toggle:hover i::before {
   top: -10px;
@@ -1741,7 +1740,7 @@ div.cs-select{
 	z-index: 9999;
 	display: block;
 	margin: 0 auto;
-	display: none;
+	// display: none;
 	cursor: pointer;
   	@media screen and (max-width: $screen-sm) {
   		display: block;
@@ -1865,7 +1864,7 @@ h2.about-heading-section, h4.small-heading {
     height: 400px;
     object-fit: cover;
     padding: 10px 25px 15px 25px;
-    border: 8px solid #9acd32;
+    border: 13px solid #44c662;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
   }
@@ -2105,4 +2104,14 @@ span.custom-bullet {
 	  max-width: 100%;
 	}
   }
+
+
+
+//   A Code for Menu
+.topnav {
+    background-color: rebeccapurple !important;
+}
+
+
+
   

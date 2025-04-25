@@ -14,10 +14,11 @@
 
 get_header();
 ?>
+
 <aside id="fh5co-hero" class="js-fullheight">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
-			<li
+			<li class="slides-li-bg"
 				style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_1.jpg');">
 				<div class="container-fluid">
 					<div class="row">
@@ -42,8 +43,8 @@ get_header();
 						</div>
 					</div>
 				</div>
-				<!-- </li> -->
-			<li
+				</li>
+			<li class="slides-li-bg"
 				style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_2.jpg');">
 				<div class="container-fluid">
 					<div class="row">
@@ -68,7 +69,7 @@ get_header();
 					</div>
 				</div>
 			</li>
-			<li
+			<li class="slides-li-bg"
 				style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg');">
 				<div class="container-fluid">
 					<div class="row">
@@ -98,145 +99,13 @@ get_header();
 	</div>
 </aside>
 
-<!-- <div id="fh5co-search-map">
-			<div class="search-property">
-				<div class="s-holder">
-					<h2>Search Properties</h2>
-					<div class="row">
-						<div class="col-xxs-12 col-xs-12">
-							<div class="input-field">
-								<label for="from">Keyword:</label>
-								<input type="text" class="form-control" id="from-place" placeholder="Any"/>
-							</div>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Property Status:</label>
-								<select class="cs-select cs-skin-border">
-									<option value="" disabled selected>Any</option>
-									<option value="1">Rent</option>
-									<option value="2">Sale</option>
-								</select>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Property Type:</label>
-								<select class="cs-select cs-skin-border input-half">
-									<option value="" disabled selected>Any</option>
-									<option value="1">Building</option>
-									<option value="2">Office</option>
-								</select>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<div class="input-field">
-								<label for="from">Location:</label>
-								<input type="text" class="form-control" id="from-place" placeholder="Any"/>
-							</div>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Price:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Bedrooms:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Bathrooms:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Area:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12">
-							<section>
-								<label for="class">Parking spots:</label>
-								<div class="wide">
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-									<select class="cs-select cs-select-half cs-skin-border input-half">
-										<option value="" disabled selected>Any</option>
-										<option value="1">Building</option>
-										<option value="2">Office</option>
-									</select>
-								</div>
-							</section>
-						</div>
-						<div class="col-xxs-12 col-xs-12 text-center">
-							<p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="map" style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/cover_bg_1.jpg');">
-			</div>
-		</div>
- -->
 
 <!-- Popular Services -->
 <div id="fh5co-features">
-	<div class="container">
+	<div class="container py-5">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-				<h3>Popular Services</h3>
+			<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box py-5">
+				<h3 class="pt-lg-5 pt-sm-3">Popular Services</h3>
 				<p>Explore our premium residential, commercial, and investment property solutions—designed with
 					innovation,
 					built on trust, and tailored to meet every lifestyle and business need across India.
@@ -334,75 +203,6 @@ get_header();
 		</div>
 	</div>
 </div>
-
-
-<!-- <div class="container my-5">
-    <h3 class="fw-bold" style="border-bottom: 2px solid black; display:inline-block;">HISTORY</h3>
-    <h2 class="fw-bold text-secondary">History</h2>
-
-    <div class="row mt-5">
-      <div class="col-md-6">
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2005</span>
-          <div>North Court Commercial Offices</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2006</span>
-          <div>Nanospace Information Technology Park</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2008</span>
-          <div>Green Olive Phase 1 Residential Homes</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2009</span>
-          <div>City Centre Commercial Offices</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2011</span>
-          <div>Luxor Residential Luxury Homes</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2014</span>
-          <div>Platinum Square Commercial Offices</div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2017</span>
-          <div>Platinum Square Commercial Offices Phase 2</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2019</span>
-          <div>The Platinum Towers in IT Hub of Kharadi, Pune</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2022</span>
-          <div>Platinum Capital in Koregaon Park</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2023</span>
-          <div>The Platinum Towers Phase-I Completed.</div>
-        </div>
-        <div class="position-relative mb-4" style="padding-left:30px;">
-          <div style="position:absolute; left:0; top:4px; width:12px; height:12px; background-color:#ff6600; border-radius:50%;"></div>
-          <span class="fw-bold" style="color:#ff6600;">2023</span>
-          <div>Ovella Launched</div>
-        </div>
-      </div>
-    </div>
-</div> -->
 
 
 <!-- Popular Properties -->
