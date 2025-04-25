@@ -60,6 +60,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 	<!-- Owl Carousel JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 		
@@ -139,7 +142,7 @@
 							</li> -->
 							<li><a href="agent.html">Agent</a></li>
 							<li><a href="blog.html">Blog</a></li>
-							<li><a href="faqs.html">FAQs</a></li>
+							<li><a href="faqs.html">Gallery</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
