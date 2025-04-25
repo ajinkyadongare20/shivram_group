@@ -116,9 +116,23 @@
 							<img src="<?php bloginfo('template_directory'); ?>/images/shivram_group_logo.jpg" alt="Shivram Group" style="height: 60px;" />
 						</a>
 					</h1>
-				<!-- START #fh5co-menu-wrap -->
+				
+					
+
 					<nav id="fh5co-menu-wrap" role="navigation">
-						<ul class="sf-menu" id="fh5co-primary-menu">
+					<?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'menu-1',
+                            'container' => false,
+                            'container_class' => '',
+                            'menu_class' => 'sf-menu ms-auto',
+                            'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                            'depth' => 3,
+                            'walker' => new wp_bootstrap_navwalker()
+                        ));
+                    ?>
+					
+						<!-- <ul class="sf-menu" id="fh5co-primary-menu">
 							<li class="active"><a href="index.html">Home</a></li>
 							<li><a href="About.html">About</a></li>
 							<li>
@@ -130,24 +144,14 @@
 									<li><a href="#">4 BHK</a></li>
 								</ul>
 							</li>
-							<!-- <li>
-								<a href="project.html" class="fh5co-sub-ddown">Project</a>
-								<ul class="fh5co-sub-menu">
-									<li><a href="#">Family</a></li>
-									<li><a href="#">CSS3 &amp; HTML5</a></li>
-									<li><a href="#">Angular JS</a></li>
-									<li><a href="#">Node JS</a></li>
-									<li><a href="#">Django &amp; Python</a></li>
-								</ul>
-							</li> -->
 							<li><a href="agent.html">Agent</a></li>
 							<li><a href="blog.html">Blog</a></li>
 							<li><a href="faqs.html">Gallery</a></li>
 							<li><a href="contact.html">Contact</a></li>
-						</ul>
+						</ul> -->
 					</nav>
 				</div>
-			</div>
+			</div> 
 		</header>
     <!-- Search End -->
     <div class="clearfix"></div>
