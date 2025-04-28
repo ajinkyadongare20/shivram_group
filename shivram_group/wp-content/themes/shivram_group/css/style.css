@@ -601,6 +601,16 @@ div.cs-select span {
   #fh5co-blog-section, #fh5co-features, #fh5co-popular-properties, #fh5co-properties, #fh5co-testimonial, #fh5co-about, #fh5co-contact, .fh5co-content-section {
     padding: 4em 0; } }
 
+    #fh5co-features {
+      padding: 4em 0 !important;
+  }
+
+  @media (max-width: 420px) {
+    #fh5co-features {
+      padding: 12em 0 0 0 !important;
+  }
+  }
+
 .fh5co-section-gray {
   background: rgba(0, 0, 0, 0.04); }
 
@@ -1387,6 +1397,7 @@ div.cs-select span {
 
 /*# sourceMappingURL=style.css.map */
 
+/* Mobile View Menu */
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -1429,7 +1440,7 @@ div.cs-select span {
   height: 800px !important;
 }
 .js-fullheight {
-  height: 800px !important;
+  height: 800px;
 }
 
 @media (max-width: 420px) {
@@ -1461,7 +1472,7 @@ div.cs-select span {
     height: 900px !important;
   }
   .js-fullheight {
-    height: 900px !important;
+    height: 700px !important;
   }
 }
 
@@ -1483,4 +1494,39 @@ div.cs-select span {
   li.menu-item {
     width: 100%;
   }
+}
+
+
+/* About - icon hover */
+.icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.feature-icon {
+  filter: invert(1) brightness(1000%) saturate(0);
+}
+
+.feature-item {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #44C662;
+  text-align: left;
+  color: white;
+}
+
+.ps-span {
+  font-family: 'Montserrat';
+}
+
+.icon-feature {
+  transform: scale(1);
+  transition: transform 0.8s ease;
+  overflow: hidden;
+}
+
+.icon-feature:hover {
+  transform: scale(1.1);
 }

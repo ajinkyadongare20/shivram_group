@@ -454,8 +454,8 @@ get_header();
 				<p>Meet our expert real estate professionals who are dedicated to helping you find the perfect residential or commercial space with personalized guidance.</p>
 			</div>
 		</div>
-		<div class="row">
-			<!-- Agent 1 -->
+		<!-- <div class="row">
+			
 			<div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
 				<div class="fh5co-staff">
 					<img class="img-responsive" src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-1.jpg" alt="Agent Rohan Deshmukh">
@@ -463,7 +463,7 @@ get_header();
 					<p>Specializes in premium residential properties across Pune and Mumbai. Trusted for seamless and strategic home buying experiences.</p>
 				</div>
 			</div>
-			<!-- Agent 2 -->
+			
 			<div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
 				<div class="fh5co-staff">
 					<img class="img-responsive" src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-2.jpg" alt="Agent Neha Kulkarni">
@@ -471,7 +471,7 @@ get_header();
 					<p>Commercial property expert with deep insight into IT hubs and office space investments in key metro areas.</p>
 				</div>
 			</div>
-			<!-- Agent 3 -->
+			
 			<div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
 				<div class="fh5co-staff">
 					<img class="img-responsive" src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-3.jpg" alt="Agent Amit Patil">
@@ -479,7 +479,7 @@ get_header();
 					<p>Focused on high-value investments and property portfolio management with tailored strategies for real estate growth.</p>
 				</div>
 			</div>
-			<!-- Agent 4 -->
+			
 			<div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
 				<div class="fh5co-staff">
 					<img class="img-responsive" src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-4.jpg" alt="Agent Priya Sharma">
@@ -487,7 +487,7 @@ get_header();
 					<p>Expert in luxury real estate projects and first-time buyer consultation with personalized customer engagement.</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 

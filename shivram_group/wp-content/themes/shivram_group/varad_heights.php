@@ -1,7 +1,7 @@
 <?php
 /**
  * The main template file
- * Template Name: Agent
+ * Template Name: Varad Heights
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
@@ -26,7 +26,7 @@ get_header();
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
 							<div class="slider-text-inner">
-								<h2 class="heading-title">Our Agent</h2>
+								<h2 class="heading-title">Varad Heights</h2>
 							</div>
 						</div>
 					</div>

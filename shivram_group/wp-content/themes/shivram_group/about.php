@@ -164,6 +164,183 @@ get_header();
 </div>
 
 
+
+
+<!-- Start Third Main-->
+<div class="container mt-5">
+        <h2 class="fw-bold" style="color: #002a5b;">Why Choose Shivram Group for Your Dream Home?</h2>
+        <div class="text-start">
+            <p>At Shivram Group, we believe in crafting not just houses, but homes that reflect quality, trust, and a lifestyle of excellence. With decades of experience in real estate development, we are committed to creating landmarks that stand the test of time in Nashik and beyond.</p>
+            <p>Our projects are a blend of modern architecture, prime locations, and unmatched amenities — ensuring a superior living experience. Trust Shivram Group for delivering projects that match your dreams and elevate your lifestyle.</p>
+
+            <div class="row mt-4">
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/building.png"
+                            alt="Trusted Developer" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Trusted Developer in Nashik</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/consultation.png"
+                            alt="Years of Experience" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">20+ Years of Experience</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/cooperation.png"
+                            alt="Quality Construction" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Superior Quality Construction</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/developer.png"
+                            alt="Prime Locations" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Prime Locations Across Nashik</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/enterprise.png"
+                            alt="Modern Amenities" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">World-Class Amenities</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/intellectual-property.png"
+                            alt="Happy Customers" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">500+ Happy Families</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/manager.png"
+                            alt="Architectural Excellence" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Architectural Excellence</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/needs.png"
+                            alt="Eco-Friendly Projects" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Eco-Friendly and Sustainable Designs</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/real-estate-agency.png"
+                            alt="Dedicated Customer Support" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Dedicated Customer Support</span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/service.png"
+                            alt="Timely Project Delivery" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Timely Project Delivery/span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/suitcase.png"
+                            alt="Innovative Design Approach" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Innovative Design Approach</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 icon-feature">
+                    <div class="feature-item d-flex align-items-center">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/about/worker.png"
+                            alt="Strong Structural Safety" class="feature-icon" width="50" height="50">
+                        <span class="ps-3 ps-span">Strong Structural Safety</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- End Third Main -->
+
+
+<!-- Agnet List -->
+<div id="fh5co-about">
+	<div class="container">
+    <h2 class="fw-bold text-dark text-center pb-5">Shivram Group Team</h2>
+		<div class="row">
+			<div class="col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
+				<div class="card fh5co-staff">
+					<img class="img-responsive"
+						src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-1.jpg"
+						alt="The Shivram Group Img 1">
+					<h3>Mr. Rajesh Kulkarni</h3>
+					<p>Expert in luxury property deals and high-value transactions with over 10 years of real estate
+						experience.</p>
+					<p><a class="btn btn-primary btn-outline" href="#">View Properties</a></p>
+				</div>
+			</div>
+			<div class="col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
+				<div class="card fh5co-staff">
+					<img class="img-responsive"
+						src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-2.jpg"
+						alt="The Shivram Group Img 2">
+					<h3>Mrs. Anjali Deshpande</h3>
+					<p>Trusted advisor in residential real estate, known for delivering seamless property buying
+						experiences.</p>
+					<p><a class="btn btn-primary btn-outline" href="#">View Properties</a></p>
+				</div>
+			</div>
+			<div class="col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
+				<div class="card fh5co-staff">
+					<img class="img-responsive"
+						src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-3.jpg"
+						alt="The Shivram Group Img 3">
+					<h3>Mr. Suresh Patil</h3>
+					<p>Specialist in commercial real estate with a deep understanding of market trends and investments.
+					</p>
+					<p><a class="btn btn-primary btn-outline" href="#">View Properties</a></p>
+				</div>
+			</div>
+			<div class="col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
+				<div class="card fh5co-staff">
+					<img class="img-responsive"
+						src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-4.jpg"
+						alt="The Shivram Group Img 4">
+					<h3>Mr. Shubham Singh</h3>
+					<p>Known for personalized services and helping families find their perfect homes in prime locations.
+					</p>
+					<p><a class="btn btn-primary btn-outline" href="#">View Properties</a></p>
+				</div>
+			</div>
+			<div class="col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
+				<div class="card fh5co-staff">
+					<img class="img-responsive"
+						src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-1.jpg"
+						alt="The Shivram Group Img 5">
+					<h3>Mr. Om Birla</h3>
+					<p>Driven by a passion for architecture and design, Jean offers unmatched insight into dream homes.
+					</p>
+					<p><a class="btn btn-primary btn-outline" href="#">View Properties</a></p>
+				</div>
+			</div>
+			<div class="col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
+				<div class="card fh5co-staff">
+					<img class="img-responsive"
+						src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/user-2.jpg"
+						alt="The Shivram Group Img 6">
+					<h3>Mr. Hussian Raghavn</h3>
+					<p>Combines deep local knowledge with top negotiation skills to ensure the best deals for clients.
+					</p>
+					<p><a class="btn btn-primary btn-outline" href="#">View Properties</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Second New Contain Start-->
 <div class="container-fluid pt-5 my-0 my-lg-5 about-card-bg">
     <div class="container">

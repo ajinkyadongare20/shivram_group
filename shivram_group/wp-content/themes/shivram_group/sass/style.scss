@@ -133,7 +133,7 @@ body {
 	line-height: 1.6;
 	font-size: 16px;
 	background: $brand-body-bg;
-	color: #848484;
+	color: #363636;
 	font-weight: 300;
 	overflow-x: hidden;
 	&.fh5co-offcanvas {
@@ -243,7 +243,7 @@ figure {
 	}
 }
 #fh5co-hero {
-	min-height: 800px;
+	min-height: 700px;
 	background: $brand-white url(../images/loader.gif) no-repeat center center;
 	position: relative;
 	.overlay{
@@ -977,6 +977,9 @@ div.cs-select{
 	}
 	.fh5co-staff {
 		margin-bottom: 3em;
+        background: #f8f8f8;
+        border: 0px;
+		padding: 0px 15px;
 		img {
 			width: 230px;
 			height: 230px;
@@ -1837,7 +1840,7 @@ h2.about-heading-section, h4.small-heading {
 	height: 100%;
   }
   .realestate-feature-box:hover {
-	border-bottom: 10px solid #9acd32;
+	border-bottom: 10px solid #44C662;
   }
   .realestate-feature-icon {
 	font-size: 40px;
@@ -1925,7 +1928,7 @@ span.custom-bullet {
     .shivram-icon-box {
 		width: 50px;
 		height: 50px;
-		background-color: #8cc63f;
+		background-color: #44C662;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -1939,7 +1942,7 @@ span.custom-bullet {
       margin-bottom: 5px;
     }
     .shivram-btn {
-      background-color: #8cc63f;
+      background-color: #44C662;
       color: white;
       width: 100%;
       border: none;
@@ -2104,8 +2107,6 @@ span.custom-bullet {
 	  max-width: 100%;
 	}
   }
-
-
 
 //   A Code for Menu
 .topnav {
