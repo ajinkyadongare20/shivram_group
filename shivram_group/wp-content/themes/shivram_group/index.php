@@ -123,7 +123,7 @@ get_header();
 					<div class="feature-copy">
 						<h3>Relocation Services</h3>
 						<p>Simplify your home shifting experience with expert support and smooth transitions to your new
-							property location.</p>
+							property locations.</p>
 					</div>
 				</div>
 			</div>
