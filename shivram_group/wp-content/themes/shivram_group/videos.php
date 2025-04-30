@@ -1,7 +1,7 @@
 <?php
 /**
- * The main template file
  * Template Name: Videos
+ * Description: Displays video content from ACF and custom post type 'videos_cpt'.
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
@@ -12,179 +12,70 @@
  * @package shivram_group
  */
 
-get_header();
+get_header(); 
 ?>
 
+<?php 
+// Banner background image from ACF
+$video_banner_background_image = get_field('video_banner_background_image', get_the_ID());
+?>
 
+<!-- Hero Section -->
 <aside id="fh5co-hero" class="js-fullheight">
-  <div class="flexslider js-fullheight">
-    <ul class="slides">
-      <li
-        style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg');">
-        <div class="overlay"></div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-              <div class="slider-text-inner">
-                <h2 class="heading-title">Videos</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
+            <li style="background-image: url('<?php echo esc_url($video_banner_background_image); ?>');">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <h2 class="heading-title">
+                                    <?php echo esc_html(get_field('video_banner_heading_tittle', get_the_ID())); ?>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </aside>
 
+<!-- Video Section -->
 <div id="fh5co-blog-section" class="fh5co-section-gray">
-<div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-        <h3>Our Videos</h3>
-        <p>Explore insights, project highlights, and real estate tips from Shivram Group – building better lifestyles through innovation and trust.</p>
-      </div>
-    </div>
-  </div>
-<div class="container video-list">
-  <div class="video-grid" style="display: flex;
-              flex-wrap: wrap;	
-              gap: 20px;
-              justify-content: flex-start;">
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Amenities show.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Bedroom.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Bedroom2 Video.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Bedroom2.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Booking Ad video.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/devghar video.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Ground floor show.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Ground floor show.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Hall video1.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Hall Video2.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Kitchen balcony show.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Kitchen balcony.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3>
+                    <?php echo esc_html(get_field('video_section_main_tittle', get_the_ID())); ?>
+                </h3>
+                <p>
+                    <?php echo esc_html(get_field('video_section_main_text', get_the_ID())); ?>
+                </p>
+            </div>
+        </div>
 
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Kitchen show.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Kitchen.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Lobby Show.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
+        <!-- Video Grid -->
+        <div class="video-list">
+            <div class="video-grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start;">
+                <?php 
+                $videos_cpt = new WP_Query( array( 'post_type' => 'videos_cpt' ));
 
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/master bedroom show.mp4"
-        onclick="playVideo(this)" controls></video>
+                while ( $videos_cpt->have_posts() ) : $videos_cpt->the_post();
+                    $video_file_gallery = get_field('video_file_gallery', get_the_ID());
+                ?>
+                    <div class="video-card">
+                        <button class="video-close" onclick="closeVideo(event)">X</button>
+                        <?php if ($video_file_gallery): ?>
+                            <video src="<?php echo esc_url($video_file_gallery); ?>" onclick="playVideo(this)" controls></video>
+                        <?php else: ?>
+                            <p>Video not available.</p>
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; wp_reset_postdata(); ?>
+            </div>
+        </div>
     </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Varad Add.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Varad Flat.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/varad intro video.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/varad navratri offer.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-    <div class="video-card">
-      <button class="video-close" onclick="closeVideo(event)">X</button>
-      <video
-        src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/videos/Varad res boobking ad.mp4"
-        onclick="playVideo(this)" controls></video>
-    </div>
-  </div>
-
 </div>
 
-
-
-
-<?php
-get_footer();
+<?php get_footer(); ?>
