@@ -98,12 +98,14 @@ get_header();
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box py-5">
                 <h3 class="pt-lg-5 pt-sm-3">
-                    <?php echo get_field('home_popular_services_tittle', get_the_ID()) ?>
+                    <!-- <?php echo get_field('home_popular_services_tittle', get_the_ID()) ?> -->
+                    <?php echo esc_html(get_field('home_popular_services_tittle', get_the_ID())); ?>
                 </h3>
                 <p>
-                    <?php echo get_field('home_popular_services_text', get_the_ID()) ?>
+                    <!-- <?php echo get_field('home_popular_services_text', get_the_ID()) ?> -->
+                    <?php echo esc_html(get_field('Home Popular Services Text', get_the_ID())); ?>
                 </p>
-                <!-- <?php var_dump($home_popular_services_tittle); ?> -->
+                <!-- <?php var_dump($home_popular_services_text); ?> -->
             </div>
         </div>
 
