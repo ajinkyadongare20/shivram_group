@@ -15,18 +15,21 @@
 get_header();
 ?>
 
+<?php 
+// Banner background image from ACF
+$cproject_banner_image = get_field('cproject_banner_image', get_the_ID());
+?>
 
 <aside id="fh5co-hero" class="js-fullheight">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
-			<li
-				style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg');">
+			<li style="background-image: url('<?php echo esc_url($cproject_banner_image); ?>');">
 				<div class="overlay"></div>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
 							<div class="slider-text-inner">
-								<h2 class="heading-title">Completed Projects</h2>
+								<h2 class="heading-title"><?php echo esc_html(get_field('cproject_banner_heading', get_the_ID())); ?></h2>
 							</div>
 						</div>
 					</div>
@@ -36,462 +39,70 @@ get_header();
 	</div>
 </aside>
 
-
-
 <!-- Completed Projects -->
 <div id="fh5co-blog-section" class="fh5co-section-gray">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                <h3>Completed Projects</h3>
-                <p>Explore insights, project highlights, and real estate tips from Shivram Group – building better
-                    lifestyles through innovation and trust.</p>
+                <h3><?php echo esc_html(get_field('cproject_main_heading', get_the_ID())); ?></h3>
+                <p><?php echo get_field('cproject_main_text', get_the_ID()); ?></p>
             </div>
         </div>
     </div>
     <div class="container py-5">
         <div class="row g-5">
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_1.jpg"
-                        alt="Property 1">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a">
-                                <a href="#">204 Mount<br>Olive Road Two</a>
-                            </h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">RENT | $12,000</span>
+            <?php 
+            $completed_projects = new WP_Query( array(
+                'post_type' => 'completed_projects'
+            ));
+
+            while ( $completed_projects->have_posts() ) : 
+                $completed_projects->the_post();
+
+                $cproject_product_images      = get_field('cproject_product_images', get_the_ID());
+                $cproject_product_view_link   = get_field('cproject_product_view_link', get_the_ID());
+                $cproject_product_view        = get_field('cproject_product_view', get_the_ID());
+                $cproject_card_tittle         = get_field('cproject_card_tittle', get_the_ID());
+                $cproject_price_box           = get_field('cproject_price_box', get_the_ID());
+                $cproject_product_card_info   = get_field('cproject_product_card_info', get_the_ID());
+            ?>
+                <div class="col-md-4">
+                    <div class="card-box-a">
+                        <?php if ($cproject_product_images): ?>
+                            <img src="<?php echo esc_url($cproject_product_images); ?>" alt="Gallery Image">
+                        <?php endif; ?>
+                        
+                        <div class="card-overlay-a-content">
+                            <div class="card-header-a">
+                                <h2 class="card-title-a">
+                                    <a href="#">
+                                        <?php echo esc_html($cproject_card_tittle); ?>
+                                    </a>
+                                </h2>
                             </div>
-                            <a href="#" class="link-a">Platinum Square, Viman Nagar | Pune &rarr;</a>
+                            <div class="card-body-a">
+                                <div class="price-box d-flex">
+                                    <span class="price-a">
+                                        <?php echo esc_html($cproject_price_box); ?>
+                                    </span>
+                                </div>
+                                <?php if ($cproject_product_view_link && $cproject_product_view): ?>
+                                    <a href="<?php echo esc_url($cproject_product_view_link); ?>" class="link-a">
+                                        <?php echo esc_html($cproject_product_view); ?> &rarr;
+                                    </a>
+                                <?php endif; ?>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4>
-                                <span>340m<sup>2</sup></span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4>
-                                <span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4>
-                                <span>4</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garages</h4>
-                                <span>1</span>
-                            </li>
-                        </ul>
+                        <div class="card-footer-a">
+                            <?php echo wp_kses_post($cproject_product_card_info); ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_2.jpg"
-                        alt="Property 2">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a">
-                                <a href="#">204 Mount<br>Olive Road Two</a>
-                            </h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">RENT | $12,000</span>
-                            </div>
-                            <a href="#" class="link-a">Green Olive – Phase 1, Hinjewadi | Pune &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4>
-                                <span>340m<sup>2</sup></span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4>
-                                <span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4>
-                                <span>4</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garages</h4>
-                                <span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg"
-                        alt="Property 3">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a">
-                                <a href="#">204 Mount<br>Olive Road Two</a>
-                            </h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">RENT | $12,000</span>
-                            </div>
-                            <a href="#" class="link-a">Green Olive Phase 2 | Pune &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4>
-                                <span>340m<sup>2</sup></span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4>
-                                <span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4>
-                                <span>4</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garages</h4>
-                                <span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg"
-                        alt="Property 3">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 3</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹95 Lakhs</span>
-                            </div>
-                            <a href="#" class="link-a">Nanospace, Baner | Pune →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>300m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>3</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_1.jpg"
-                        alt="Property 4">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 4</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹1.1 Cr</span>
-                            </div>
-                            <a href="#" class="link-a">Luxor, Kalyani Nagar | Pune →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>320m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>3</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_2.jpg"
-                        alt="Property 5">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 5</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹88 Lakhs</span>
-                            </div>
-                            <a href="#" class="link-a">North Court, Kalyani Nagar | Pune →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>290m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 7 -->
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg"
-                        alt="Property 6">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 6</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹1.3 Cr</span>
-                            </div>
-                            <a href="#" class="link-a">Ovella | Built To Suit Office Campus →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>380m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>4</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>3</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>2</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 8 -->
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_1.jpg"
-                        alt="Property 7">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 7</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹1.6 Cr</span>
-                            </div>
-                            <a href="#" class="link-a">City Center, Dadar | Mumbai →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>420m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>4</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>3</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>2</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 9 -->
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_2.jpg"
-                        alt="Property 8">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 8</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹1.05 Cr</span>
-                            </div>
-                            <a href="#" class="link-a">Skyline Towers | Nashik →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>330m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>3</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 10 -->
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg"
-                        alt="Property 9">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 9</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹92 Lakhs</span>
-                            </div>
-                            <a href="#" class="link-a">Ovella | Built To Suit Office Campus Nashik →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>310m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>3</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 11 -->
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_1.jpg"
-                        alt="Property 9">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 9</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹92 Lakhs</span>
-                            </div>
-                            <a href="#" class="link-a">Luxor, Pathardi Phata | Nashik →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>310m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>3</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 12 -->
-            <div class="col-md-4">
-                <div class="card-box-a">
-                    <img src="http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_2.jpg"
-                        alt="Property 9">
-                    <div class="card-overlay-a-content">
-                        <div class="card-header-a">
-                            <h2 class="card-title-a"><a href="#">Shivram Villa 9</a></h2>
-                        </div>
-                        <div class="card-body-a">
-                            <div class="price-box d-flex">
-                                <span class="price-a">SALE | ₹92 Lakhs</span>
-                            </div>
-                            <a href="#" class="link-a">Metropolitan Grand | Nashik →</a>
-                        </div>
-                    </div>
-                    <div class="card-footer-a">
-                        <ul class="card-info">
-                            <li>
-                                <h4 class="card-info-title">Area</h4><span>310m²</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Beds</h4><span>3</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Baths</h4><span>2</span>
-                            </li>
-                            <li>
-                                <h4 class="card-info-title">Garage</h4><span>1</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; wp_reset_postdata(); ?>
         </div>
     </div>
 </div>
 
-
-
 <?php
 get_footer();
+?>

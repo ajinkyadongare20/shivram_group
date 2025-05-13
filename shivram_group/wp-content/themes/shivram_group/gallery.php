@@ -51,7 +51,7 @@ $gallery_background_banner_image = get_field('gallery_background_banner_image_',
                     <?php echo esc_html(get_field('gallery_main_heading_tittle', get_the_ID())); ?>
                 </h3>
                 <p>
-                    <?php echo esc_html(get_field('gallery_main_heading_text', get_the_ID())); ?>
+                    <?php echo get_field('gallery_main_heading_text', get_the_ID()); ?>
                 </p>
             </div>
         </div>

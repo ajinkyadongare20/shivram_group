@@ -12,40 +12,46 @@
  * @package shivram_group
  */
 
-get_header();
-?>
+ get_header();
+ ?>
+ 
+ <?php 
+ // Banner background image from ACF
+ $contact_banner_image = get_field('contact_banner_image', get_the_ID());
+ ?>
 
 
 <aside id="fh5co-hero" class="js-fullheight">
-  <div class="flexslider js-fullheight">
-    <ul class="slides">
-      <li
-        style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg');">
-        <div class="overlay"></div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-              <div class="slider-text-inner">
-                <h2 class="heading-title">Contact</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
+            <li style="background-image: url('<?php echo esc_url($contact_banner_image); ?>');">
+                <div class="overlay"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <h2 class="heading-title">
+                                    <?php echo esc_html(get_field('contact_banner_heading', get_the_ID())); ?>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </aside>
-
 
 
 <div class="container-fluid py-5 mt-5">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-      <h3>Request for Contact</h3>
-      <p>Explore the latest residential and commercial properties across India—from luxurious villas in Goa to
-        high-rise apartments in Pune, crafted with the trust and quality of the Shivram Group.</p>
+      <h3><?php echo esc_html(get_field('contact_main_heading', get_the_ID())); ?></h3>
+      <p><?php echo get_field('contact_heading_text', get_the_ID()); ?></p>
     </div>
   </div>
+
+
   <div class="container-fluid pb-5">
     <div class="row justify-content-center">
       <!-- Form Section -->
@@ -126,8 +132,6 @@ get_header();
     </div>
   </div>
 </div>
-
-
 
 
 <?php
