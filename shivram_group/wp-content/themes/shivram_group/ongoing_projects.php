@@ -15,177 +15,84 @@
 get_header();
 ?>
 
+<?php 
+// Banner background image from ACF
+$onproject_banner_image = get_field('onproject_banner_image', get_the_ID());
+?>
 
 <aside id="fh5co-hero" class="js-fullheight">
-	<div class="flexslider js-fullheight">
-		<ul class="slides">
-			<li
-				style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg');">
-				<div class="overlay"></div>
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
-							<div class="slider-text-inner">
-								<h2 class="heading-title">Ongoing Projects</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
+    <div class="flexslider js-fullheight">
+        <ul class="slides">
+            <li style="background-image: url('<?php echo esc_url($onproject_banner_image); ?>');">
+                <div class="overlay"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <h2 class="heading-title">
+                                    <?php echo esc_html(get_field('onproject_banner_heading', get_the_ID())); ?>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </aside>
-
-
 
 <!-- Newest Properties -->
 <div id="fh5co-properties" class="fh5co-section-gray">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-				<h3>Ongoing Projects</h3>
-				<p>Explore the latest residential and commercial properties across India—from luxurious villas in Goa to high-rise apartments in Pune, crafted with the trust and quality of the Shivram Group.</p>
-			</div>
-		</div>
-		<div class="row">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3>
+                    <?php echo esc_html(get_field('onproject_main_heading', get_the_ID())); ?>
+                </h3>
+                <p>
+                    <?php echo get_field('onproject_heading_text', get_the_ID()); ?>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <?php 
+            $ongoing_projects = new WP_Query(array('post_type' => 'ongoing_projects'));
 
-			<!-- Property 1 -->
-			<div class="col-md-4 animate-box">
-				<div class="property">
-					<a href="#" class="fh5co-property"
-						style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/property-1.jpg');">
-						<span class="status">Sale</span>
-						<ul class="list-details">
-							<li>2000 ft sq</li>
-							<li>5 Bedroom</li>
-							<li>4 Bathroom</li>
-							<li>3 Garage</li>
-						</ul>
-					</a>
-					<div class="property-details">
-						<h3>Luxury Villa near Diveagar Beach</h3>
-						<span class="price">₹2.5 Cr</span>
-						<p>Stunning sea-facing villa in Goa, offering modern comforts and tropical vibes. Perfect for vacation homes or investment.</p>
-						<span class="address"><i class="icon-map"></i>Candolim, Goa, India</span>
-					</div>
-				</div>
-			</div>
-
-			<!-- Property 2 -->
-			<div class="col-md-4 animate-box">
-				<div class="property">
-					<a href="#" class="fh5co-property"
-						style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/property-2.jpg');">
-						<span class="status">Rent</span>
-						<ul class="list-details">
-							<li>1800 ft sq</li>
-							<li>3 Bedroom</li>
-							<li>2 Bathroom</li>
-							<li>1 Garage</li>
-						</ul>
-					</a>
-					<div class="property-details">
-						<h3>Furnished Flat in Nashik</h3>
-						<span class="price">₹35,000/month</span>
-						<p>Modern apartment in Pune’s IT hub, with premium amenities and excellent connectivity.</p>
-						<span class="address"><i class="icon-map"></i>Baner, Pune, Maharashtra</span>
-					</div>
-				</div>
-			</div>
-
-			<!-- Property 3 -->
-			<div class="col-md-4 animate-box">
-				<div class="property">
-					<a href="#" class="fh5co-property"
-						style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/property-3.jpg');">
-						<span class="status">Sale</span>
-						<ul class="list-details">
-							<li>2200 ft sq</li>
-							<li>4 Bedroom</li>
-							<li>3 Bathroom</li>
-							<li>2 Garage</li>
-						</ul>
-					</a>
-					<div class="property-details">
-						<h3>Independent House in Baner</h3>
-						<span class="price">₹1.9 Cr</span>
-						<p>Spacious independent home in a quiet yet well-connected neighborhood of Bengaluru.</p>
-						<span class="address"><i class="icon-map"></i>Whitefield, Bengaluru, Karnataka</span>
-					</div>
-				</div>
-			</div>
-
-			<!-- Property 4 -->
-			<div class="col-md-4 animate-box">
-				<div class="property">
-					<a href="#" class="fh5co-property"
-						style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/property-4.jpg');">
-						<span class="status">Sale</span>
-						<ul class="list-details">
-							<li>2500 ft sq</li>
-							<li>5 Bedroom</li>
-							<li>4 Bathroom</li>
-							<li>2 Garage</li>
-						</ul>
-					</a>
-					<div class="property-details">
-						<h3>Row House in Kharadi</h3>
-						<span class="price">₹2.1 Cr</span>
-						<p>Elegant row house in one of Pune’s fastest-growing residential zones, perfect for families.</p>
-						<span class="address"><i class="icon-map"></i>Kharadi, Pune, Maharashtra</span>
-					</div>
-				</div>
-			</div>
-
-			<!-- Property 5 -->
-			<div class="col-md-4 animate-box">
-				<div class="property">
-					<a href="#" class="fh5co-property"
-						style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/property-5.jpg');">
-						<span class="status">Rent</span>
-						<ul class="list-details">
-							<li>1500 ft sq</li>
-							<li>3 Bedroom</li>
-							<li>2 Bathroom</li>
-							<li>1 Garage</li>
-						</ul>
-					</a>
-					<div class="property-details">
-						<h3>Family Flat in Wakad</h3>
-						<span class="price">₹25,000/month</span>
-						<p>Well-maintained flat close to schools and shopping centres, ideal for small families.</p>
-						<span class="address"><i class="icon-map"></i>Wakad, Pune, Maharashtra</span>
-					</div>
-				</div>
-			</div>
-
-			<!-- Property 6 -->
-			<div class="col-md-4 animate-box">
-				<div class="property">
-					<a href="#" class="fh5co-property"
-						style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/property-6.jpg');">
-						<span class="status">Sale</span>
-						<ul class="list-details">
-							<li>3000 ft sq</li>
-							<li>6 Bedroom</li>
-							<li>5 Bathroom</li>
-							<li>3 Garage</li>
-						</ul>
-					</a>
-					<div class="property-details">
-						<h3>Hilltop Bungalow in Lonavala</h3>
-						<span class="price">₹3.6 Cr</span>
-						<p>Experience peace and luxury with breathtaking views and spacious interiors, just 2 hours from Mumbai.</p>
-						<span class="address"><i class="icon-map"></i>Tiger Point Road, Lonavala, Maharashtra</span>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
+            while ($ongoing_projects->have_posts()) : 
+                $ongoing_projects->the_post();
+                $onproject_properties_image = get_field('onproject_properties_image', get_the_ID());
+            ?>
+                <div class="col-md-4 animate-box">
+                    <div class="property">
+                        <a href="#" class="fh5co-property"
+                           style="background-image: url('<?php echo esc_url($onproject_properties_image); ?>');">
+                            <span class="status">
+                                <?php echo get_field('onproject_properties_status', get_the_ID()); ?>
+                            </span>
+                            <?php echo get_field('onproject_properties_list_details', get_the_ID()); ?>
+                        </a>
+                        <div class="property-details">
+                            <h3>
+                                <?php echo get_field('onproject_properties_property_details', get_the_ID()); ?>
+                            </h3>
+                            <span class="price">
+                                <?php echo get_field('onproject_properties_price', get_the_ID()); ?>
+                            </span>
+                            <p>
+                                <?php echo get_field('onproject_properties_desc', get_the_ID()); ?>
+                            </p>
+                            <span class="address">
+                                <i class="icon-map"></i> 
+                                <?php echo get_field('onproject_properties_address', get_the_ID()); ?>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+        </div>
+    </div>
 </div>
-
-
 
 <?php
 get_footer();
+?>

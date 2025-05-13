@@ -103,7 +103,7 @@ get_header();
                 </h3>
                 <p>
                     <!-- <?php echo get_field('home_popular_services_text', get_the_ID()) ?> -->
-                    <?php echo esc_html(get_field('Home Popular Services Text', get_the_ID())); ?>
+                    <?php echo esc_html(get_field('home_popular_services_text', get_the_ID())); ?>
                 </p>
                 <!-- <?php var_dump($home_popular_services_text); ?> -->
             </div>
