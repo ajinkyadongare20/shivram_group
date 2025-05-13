@@ -8,6 +8,8 @@
  *
  * @package shivram_group
  */
+
+ $current_page_id = 414;
 ?>
 
 <footer>
@@ -16,50 +18,35 @@
       <div class="row row-bottom-padded-md">
         <div class="col-md-3">
           <h3 class="section-title">
-            <?php echo get_field('footer_heading', get_the_ID()); ?>Shree Shivram Group
+            <?php echo get_field('footer_heading', $current_page_id); ?>
           </h3>
           <p>
-            <?php echo get_field('footer_heading_text', get_the_ID()); ?>
-            Shree Shivram Group is dedicated to delivering quality construction and real estate solutions, combining innovation, trust, and excellence to build a better future for communities and clients.
+            <?php echo get_field('footer_heading_text', $current_page_id); ?>
           </p>
         </div>
 
         <div class="col-md-3 col-md-push-1">
           <h3 class="section-title">
-            <?php echo get_field('footer_link_heading', get_the_ID()); ?>Links
+            <?php echo get_field('footer_link_heading', $current_page_id); ?>
           </h3>
-          <?php echo get_field('footer_all_links', get_the_ID()); ?>
+          <?php echo get_field('footer_all_links', $current_page_id); ?>
 
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Properties</a></li>
-            <li><a href="#">Agent</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">API</a></li>
-            <li><a href="#">FAQ / Contact</a></li>
-          </ul>
         </div>
 
         <div class="col-md-3">
           <h3 class="section-title">
-            <?php echo get_field('footer_information', get_the_ID()); ?>Information
+            <?php echo get_field('footer_information', $current_page_id); ?>
           </h3>
-          <?php echo get_field('footer_information_links', get_the_ID()); ?>
-          <ul>
-            <li><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="#">License</a></li>
-            <li><a href="#">Privacy &amp; Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
+          <?php echo get_field('footer_information_links', $current_page_id); ?>
+          
         </div>
 
         <div class="col-md-3">
           <h3 class="section-title">
-            <?php echo get_field('footer_newsletter', get_the_ID()); ?>Newsletter
+            <?php echo get_field('footer_newsletter', $current_page_id); ?>
           </h3>
           <p>
-            <?php echo get_field('footer_newsletter_text', get_the_ID()); ?>
-            Join our mailing list to receive the latest updates, property listings, and real estate tips straight to your inbox.
+            <?php echo get_field('footer_newsletter_text', $current_page_id); ?>
           </p>
           <form id="fh5co-header-subscribe">
             <div class="input-group">

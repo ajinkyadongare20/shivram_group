@@ -13,80 +13,37 @@
  */
 
 get_header();
+$current_page_id = 21;
 ?>
 
 <aside id="fh5co-hero" class="js-fullheight">
     <div class="flexslider js-fullheight">
         <ul class="slides">
-            <li class="slides-li-bg" style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_1.jpg');">
+            <?php 
+            $home_slider_cpt = new WP_Query(array('post_type' => 'home_slider_cpt'));
+            while ($home_slider_cpt->have_posts()) : 
+                $home_slider_cpt->the_post();
+                $home_slider_image = get_field('home_slider_image', get_the_ID());
+            ?>
+            <li class="slides-li-bg" style="background-image: url('<?php echo esc_url($home_slider_image); ?>');">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4 col-md-offset-4 col-md-pull-4 js-fullheight slider-text">
                             <div class="slider-text-inner">
                                 <div class="desc">
-                                    <span class="status">Sale</span>
-                                    <h1>Luxurious 4 BHK House in Mumbai, India</h1>
-                                    <h2 class="price">INR 45,00,000</h2>
-                                    <p>Experience upscale living with this 4 BHK home in Mumbai – spacious, stylish, and built with Shivram Group’s hallmark of quality and trust.</p>
-                                    <p class="details">
-                                        <span>2000 sq. ft.</span>
-                                        <span>4 Bedrooms</span>
-                                        <span>3 Bathrooms</span>
-                                        <span>2 Car Garage</span>
-                                    </p>
-                                    <a class="btn btn-primary btn-lg" href="#">Learn More</a>
+                                    <span class="status"><?php echo get_field('home_slider_status', get_the_ID()); ?></span>
+                                    <h1><?php echo get_field('home_slider_address_heading', get_the_ID()); ?></h1>
+                                    <h2 class="price"><?php echo get_field('home_slider_price', get_the_ID()); ?></h2>
+                                    <p><?php echo get_field('home_slider_info_text', get_the_ID()); ?></p>
+                                    <?php echo get_field('home_slider_product_details', get_the_ID()); ?>
+                                    <a class="btn btn-primary btn-lg" href="#"><?php echo get_field('home_slider_learn_more', get_the_ID()); ?></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="slides-li-bg" style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_2.jpg');">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4 col-md-offset-4 col-md-pull-4 js-fullheight slider-text">
-                            <div class="slider-text-inner">
-                                <div class="desc">
-                                    <span class="status">Rent</span>
-                                    <h1>New House in Nashik, India</h1>
-                                    <h2 class="price">INR 15,000</h2>
-                                    <p>Spacious new 3BHK house available for rent in Nashik. Modern amenities, prime location, and ideal for families seeking comfort at INR 20,000/month.</p>
-                                    <p class="details">
-                                        <span>1600 sq. ft.</span>
-                                        <span>3 Bedrooms</span>
-                                        <span>3 Bathrooms</span>
-                                        <span>1 Car Garage</span>
-                                    </p>
-                                    <p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="slides-li-bg" style="background-image: url('http://localhost/wordpess_projects/shivram_group/shivram_group/wp-content/themes/shivram_group/images/img_bg_3.jpg');">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4 col-md-offset-4 col-md-pull-4 js-fullheight slider-text">
-                            <div class="slider-text-inner">
-                                <div class="desc">
-                                    <span class="status">Sale</span>
-                                    <h1>Elegant 4 BHK House in Pune, India</h1>
-                                    <h2 class="price">INR 35,00,000</h2>
-                                    <p>This beautifully designed 4 BHK home in Pune offers 2000 sq. ft. of luxury living, modern amenities, and premium craftsmanship by Shivram Group.</p>
-                                    <p class="details">
-                                        <span>2000 sq. ft.</span>
-                                        <span>4 Bedrooms</span>
-                                        <span>3 Bathrooms</span>
-                                        <span>2 Car Garage</span>
-                                    </p>
-                                    <p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
+            <?php endwhile; wp_reset_postdata(); ?>
         </ul>
     </div>
 </aside>
@@ -98,14 +55,12 @@ get_header();
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box py-5">
                 <h3 class="pt-lg-5 pt-sm-3">
-                    <!-- <?php echo get_field('home_popular_services_tittle', get_the_ID()) ?> -->
-                    <?php echo esc_html(get_field('home_popular_services_tittle', get_the_ID())); ?>
+                    <?php echo esc_html(get_field('home_popular_services_tittle', $current_page_id)); ?> 
                 </h3>
                 <p>
-                    <!-- <?php echo get_field('home_popular_services_text', get_the_ID()) ?> -->
-                    <?php echo esc_html(get_field('home_popular_services_text', get_the_ID())); ?>
+                    <?php echo get_field('home_popular_services_text', $current_page_id); ?>
                 </p>
-                <!-- <?php var_dump($home_popular_services_text); ?> -->
+                <?php //var_dump(get_the_ID()); ?>
             </div>
         </div>
 
@@ -136,9 +91,10 @@ get_header();
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3 class="pt-lg-5 pt-sm-3">
-                    <?php echo get_field('home_popular_properties_tittle', get_the_ID()) ?>
+                    <?php echo get_field('home_popular_properties_tittle', $current_page_id) ?> 
                 </h3>
-                <p><?php echo get_field('home_popular_properties_text', get_the_ID()) ?></p>
+                <p><?php echo get_field('home_popular_properties_text', $current_page_id) ?>
+                </p>
             </div>
         </div>
         <div class="row">
@@ -167,7 +123,7 @@ get_header();
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2><?php echo get_field('home_heading_client_testimonials', get_the_ID()) ?></h2>
+                <h2><?php echo get_field('home_heading_client_testimonials', $current_page_id) ?></h2>
             </div>
         </div>
         <div class="row">
@@ -197,9 +153,9 @@ get_header();
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3 class="pt-lg-5 pt-sm-3">
-                    <?php echo get_field('home_heading_newest_properties_tittle', get_the_ID()) ?>
+                    <?php echo get_field('home_heading_newest_properties_tittle', $current_page_id) ?> 
                 </h3>
-                <p><?php echo get_field('home_heading_newest_properties_text', get_the_ID()) ?></p>
+                <p><?php echo get_field('home_heading_newest_properties_text', $current_page_id) ?> </p>
             </div>
         </div>
         <div class="row">
@@ -246,8 +202,8 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-                <h3 class="pt-lg-5 pt-sm-3"><?php echo get_field('home_recent_blogs', get_the_ID()) ?></h3>
-                <p><?php echo get_field('home_recent_blogs_text', get_the_ID()) ?></p>
+                <h3 class="pt-lg-5 pt-sm-3"><?php echo get_field('home_recent_blogs', $current_page_id) ?></h3>
+                <p><?php echo get_field('home_recent_blogs_text', $current_page_id) ?></p>
             </div>
         </div>
     </div>
